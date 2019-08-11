@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Media de Internet e Web</title>
+</head>
+	<script type="text/javascript">
+		function media()
+		{
+			document.write("<h1>Curso: Ciência da Computação</h1><h2>Matéria: Internet e Web</h2><h3>Media das notas de Internet e Web</h3><h4>Professor responsável: Dr. Fábio Paraguaçu</h4>")
+
+			aluno = prompt("Digite seu nome:","")
+			matricula = parseInt(prompt("Digite seu numero de matricula:",""))
+			periodo = prompt("Insira seu periodo:","")
+
+			nota1 = parseFloat(prompt("Digite a nota do projeto 1 referente a AB1: "))
+					  
+			nota2 = parseFloat(prompt("Digite a nota do projeto 2 referente a AB1 : "))
+
+			nota3 = parseFloat(prompt("Digite a nota do projeto 3 referente a AB1 : "))
+
+			nota4 = parseFloat(prompt("Digite a nota do projeto 4 referente a AB1 : "))
+
+			Projeto_Avaliativo_1 = parseFloat(prompt("Digite a nota do Projeto Avaliativo 1: "))
+
+			nota5 = parseFloat(prompt("Digite a nota do projeto 1 referente a AB2: "))
+					  
+			nota6 = parseFloat(prompt("Digite a nota do projeto 2 referente a AB2: "))
+
+			nota7 = parseFloat(prompt("Digite a nota do projeto 3 referente a AB2: "))
+
+			nota8 = parseFloat(prompt("Digite a nota do projeto 4 referente a AB2: "))
+
+			Projeto_Avaliativo_2 = parseFloat(prompt("Digite a nota do Projeto Avaliativo 2: "))
+
+			media_projetos1 = parseFloat(nota1 + nota2 + nota3 + nota4) / 4
+			media_projetos2 = parseFloat(nota5 + nota6 + nota7 + nota8) / 4 
+			Media_ab1 = parseFloat((Projeto_Avaliativo_1*0.5) + (media_projetos1*0.5))
+			Media_ab2 = parseFloat((Projeto_Avaliativo_2*0.5) + (media_projetos2*0.5))
+
+			Media_Final = (Media_ab1 + Media_ab2) / 2
+
+			if(Media_Final >= 7)
+			{
+				document.write("Nome: "+aluno+"<br>Matricula:"+matricula+"<br>Periodo: "+periodo+"<br>Nota 1: "+Media_ab1+"<br>Nota 2: "+Media_ab2+"<br>Voce foi aprovado nesta materia com media: "+Media_Final)
+			}
+			else if(Media_Final >= 5 && Media_Final < 7)
+			{
+				document.write("Nome: "+aluno+"<br>Matricula: "+matricula+"<br>Periodo: "+periodo+"<br><br>Nota 1: "+Media_ab1+"<br>Nota 2: "+Media_ab2+"<br>Voce vai para a reavaliação com media: "+Media_Final)
+			}
+			else
+			{
+				document.write("Nome: "+aluno+"<br>Matricula: "+matricula+"<br>Periodo: "+periodo+"<br><br>Nota 1: "+Media_ab1+"<br>Nota 2: "+Media_ab2+"<br>Voce foi reprovado com media: "+Media_Final)
+			}
+		}
+	</script>
+<body>
+	<h1>Curso: Ciência da Computação</h1>
+	<h2>Matéria: Internet e Web</h2>
+	<h3>Media das notas dos alunos</h3>
+	<h3>Professor responsável: Dr. Fábio Paraguaçu</h3>
+<form>
+	<input type="button" name="Media" value="Calcular media" onclick="media()">
+</form>
+</body>
+	<style type="text/css">
+      		form
+      		{
+      			font-family: Arial;
+      			font-style: italic;
+      			text-align: center;
+      			font-size: 20px; 
+      		}
+      		body 
+        	{ 
+          		background-color: black; 
+        	}
+        	h1
+        	{
+        		font-family: Arial;
+        		font-style: italic;
+      			text-align: center;
+      			font-size: 50px;
+      			color: white;	
+        	}
+        	h2
+        	{
+        		font-family: Arial;
+        		font-style: italic;
+      			text-align: center;
+      			font-size: 30px;
+      			color: white;
+        	}
+        	h3
+        	{
+        		font-family: Arial;
+        		font-style: italic;
+      			text-align: center;
+      			font-size: 30px;
+      			color: white;
+        	}
+        	h4
+        	{
+        		font-family: Arial;
+        		font-style: italic;
+      			text-align: center;
+      			font-size: 30px;
+      			color: white;
+        	}
+      		</style>
+</html>
